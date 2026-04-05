@@ -1,4 +1,4 @@
-function Search() {
+function Search({ intText, handleInputText }) {
   return (
     <div className="flex w-full flex-wrap items-center justify-center gap-2">
       <p className="text-[16px] font-medium tracking-wider text-teal-600 uppercase md:text-lg">
@@ -7,6 +7,8 @@ function Search() {
       <input
         className="w-40 rounded-lg border-[0.5px] border-gray-300 px-2 text-sm outline-none sm:w-80 md:w-96 md:py-1 lg:w-lg"
         type="text"
+        value={intText}
+        onChange={handleInputText}
       />
       <button className="cursor-pointer rounded-lg bg-teal-500 px-5 py-2 text-black sm:py-0 md:py-1">
         Search
@@ -16,3 +18,5 @@ function Search() {
 }
 
 export default Search;
+
+// http://www.omdbapi.com/?i=tt3896198&apikey=d29b4ffb
